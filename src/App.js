@@ -22,6 +22,13 @@ function App() {
   return (
     <div>
       {/* <User data={ images } /> */}
+
+      <div>
+        <p className='parentt'>
+          Welcome
+        </p>
+      </div>
+      
       <div>
         <p className='heading'>
           Hello World
