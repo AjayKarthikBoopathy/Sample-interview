@@ -1,11 +1,16 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 //import User from './User';
+import video from './video/videofile.mp4'
+import ReactPlayer from 'react-player'
 
 
 function App() {
   const [images, setImages] = useState([]);
   const [currentItems, setCurrentItems] = useState([]);
+  const [img, setImg] = useState("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.in%2FCartoon-Sticker-Kindergarten-Decoration-Adhesive%2Fdp%2FB08ZYQ5RDH&psig=AOvVaw3j62H17Iuctq-yOPDZkHTl&ust=1720848377345000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLjn9_nhoIcDFQAAAAAdAAAAABAE");
+
+  const imgData = "https://i.pinimg.com/originals/f4/ed/18/f4ed18e4f8c07a1688153de9daa5bd6c.jpg"
 
   useEffect(() => {
     const getUsersData = async () => {
@@ -28,12 +33,35 @@ function App() {
           Welcome
         </p>
       </div>
-      
+
       <div>
         <p className='heading'>
           Hello World
         </p>
       </div>
+
+<div className='content'>
+      <div className='profile'>
+        <img src={imgData} alt='Jerry'/>
+      </div>
+
+      <div className='videobox'>
+        <video src={video} width="600" height="450" controls>
+        </video>
+      </div>
+      </div>
+
+
+      {/* <div className='player-wrapper'>
+          <ReactPlayer
+            className='react-player fixed-bottom'
+            url= 'M_03292018202006_00000000U2940605_1_001-1.MP4'
+            width='100%'
+            height='100%'
+            controls = {true}
+
+          />
+        </div> */}
 
       
 
